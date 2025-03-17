@@ -49,7 +49,7 @@ public class AuthService {
 
         if (!passwordEncoder.matches(password.trim(), user.getPassword())) {
             logger.warn("Senha incorreta para o email: {}", email);
-            throw new InvalidCredentialsException("Senha incorreta.");
+            throw new InvalidCredentialsException("Usuário ou senha incorreta.");
         }
 
         String token = jwtService.generateToken(user);

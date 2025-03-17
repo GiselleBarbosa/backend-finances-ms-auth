@@ -10,9 +10,11 @@ spring:
   jpa:
     open-in-view: true
 
+jwt:
+  secret: ${SECRET_KEY}
+
 server:
   port: 8200
 
-jwt:
-  secret: ${SECRET_KEY}
+
 
